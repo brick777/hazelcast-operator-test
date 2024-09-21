@@ -1,0 +1,16 @@
+POST http://localhost:8081/api/cache
+Content-Type: application/json
+
+{
+  "key": "test",
+  "value": "test-value"
+}
+
+###
+
+PUT http://localhost:8081/api/cache/test
+Content-Type: text/plain
+
+new-test-value
+
+###
