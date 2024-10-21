@@ -2,6 +2,12 @@
 
 ### Operator installation
 
+Prerequisite (docker images):
+
+- hazelcast/hazelcast 5.5
+- hazelcast/platform-operator-agent:0.1.22
+- hazelcast/hazelcast-platform-operator:5.10.0
+
 #### 1. Add the Hazelcast Helm Charts repository to your Helm repository list by running the following command: <br/>
 
 <code>helm repo add hazelcast https://hazelcast-charts.s3.amazonaws.com/ <br/></code>
@@ -9,20 +15,21 @@
 
 #### 2. You can either deploy the Hazelcast Platform Operator<br/>
 
-<code>helm install operator hazelcast/hazelcast-platform-operator --version=5.13.0 \
---set=installCRDs=true</code>
+<code>helm install operator hazelcast/hazelcast-platform-operator --version=5.10.0</code>
 
 ### Start the Hazelcast Cluster
 
-#### 1. Create a Kubernetes secret to hold your license key.
+#### 1. License key
 
-<code>kubectl create secret generic hazelcast-license-key --from-literal=license-key=YOUR LICENSE KEY</code>
+~~<code>kubectl create secret generic hazelcast-license-key --from-literal=license-key=YOUR LICENSE KEY</code>~~
 
-You have to generate the licence key if you don't have one yet.
+~~You have to generate the licence key if you don't have one yet.~~
+
+Comunity version no need license key.
 
 #### 2. Apply the custom resource to start the Hazelcast cluster.<br/>
 
-<code>kubectl apply -f kubernetes/hazelcast-enterprise.yaml</code>
+<code>kubectl apply -f kubernetes/hazelcast.yaml</code>
 
 ### Check that the Hazelcast Cluster is Running
 
@@ -31,9 +38,8 @@ You have to generate the licence key if you don't have one yet.
 ### Clean up<br/>
 
 <code>kubectl delete -f hazelcast.yaml</code><br/>
-<code>kubectl delete -f hazelcast-enterprise.yaml</code></br>
-<code>kubectl delete secret hazelcast-license-key</code><br/>
 <code>helm uninstall operator</code>
+~~<code>kubectl delete secret hazelcast-license-key</code><br/>~~
 
 References: <br/>
 [Deploy a Cluster with the Hazelcast Platform Operator for Kubernetes](https://docs.hazelcast.com/operator/5.13/get-started)<br/>
