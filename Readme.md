@@ -25,7 +25,7 @@ Prerequisites (docker images):
 
 ~~You have to generate the licence key if you don't have one yet.~~
 
-Comunity version no need license key.
+Community version no need license key.
 
 #### 2. Apply the custom resource to start the Hazelcast cluster.<br/>
 
