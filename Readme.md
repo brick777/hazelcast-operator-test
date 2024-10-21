@@ -2,7 +2,7 @@
 
 ### Operator installation
 
-Prerequisite (docker images):
+Prerequisites (docker images):
 
 - hazelcast/hazelcast 5.5
 - hazelcast/platform-operator-agent:0.1.22
@@ -10,7 +10,7 @@ Prerequisite (docker images):
 
 #### 1. Add the Hazelcast Helm Charts repository to your Helm repository list by running the following command: <br/>
 
-<code>helm repo add hazelcast https://hazelcast-charts.s3.amazonaws.com/ <br/></code>
+<code>helm repo add hazelcast https://hazelcast-charts.s3.amazonaws.com/ <br/></code><br/>
 <code>helm repo update</code>
 
 #### 2. You can either deploy the Hazelcast Platform Operator<br/>
