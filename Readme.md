@@ -38,7 +38,7 @@ Comunity version no need license key.
 ### Clean up<br/>
 
 <code>kubectl delete -f hazelcast.yaml</code><br/>
-<code>helm uninstall operator</code>
+<code>helm uninstall operator</code><br/>
 ~~<code>kubectl delete secret hazelcast-license-key</code><br/>~~
 
 References: <br/>
